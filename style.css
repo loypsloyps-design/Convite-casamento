@@ -19,7 +19,7 @@ body {
 
 .capa {
     min-height: 100vh;
-    padding: 150px 20px;
+    padding: 40px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
