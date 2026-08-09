@@ -6,9 +6,7 @@
 }
 
 body {
-    background:url('fundo.jpg') center / cover no-repeat;
-    background-position: center; 
-    background-repeat: no-repeat;
+    background: url('fundo.jpg') center / cover no-repeat;
     color: #4a3b32;
     text-align: center;
 }
