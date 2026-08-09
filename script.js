@@ -92,8 +92,8 @@ formulario.addEventListener("submit", function(event) {
        GOOGLE PLANILHAS
     ========================= */
 
-    const urlGoogle =
-       const urlGoogle =
+
+      const urlGoogle =
     "https://script.google.com/macros/s/AKfycbxgLQF4UsOtVQG1JdGPbgLHYwXj60LZhV8xMyFkiU4DISSfITLfcS9FV-EpfFyWynbl/exec";
 
 
