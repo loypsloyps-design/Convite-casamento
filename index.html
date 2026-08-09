@@ -1,83 +1,421 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Felipe & Asthari - Casamento</title>
+    <title>Felipe & Asthari | Nosso Casamento</title>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<section class="capa">
+    <!-- =========================
+         TOPO / HERO
+    ========================== -->
 
-<div class="foto">
-<!-- Coloque a foto do casal aqui depois -->
-</div>
+    <header class="hero">
 
-<h1>Felipe & Asthari</h1>
+        <img src="imagens/casal.jpg" class="foto-casal" alt="Felipe e Asthari">
 
-<p>Nosso grande dia</p>
+        <div class="overlay"></div>
 
-<div class="data">
-16 de Janeiro de 2027<br>
-às 19:00 horas
-</div>
+        <div class="ramos ramo-esquerdo">🌿</div>
+        <div class="ramos ramo-direito">🌿</div>
 
-</section>
+        <div class="hero-conteudo">
 
+            <p class="frase-topo">
+                Com a bênção de Deus e com o coração cheio de amor,<br>
+                vamos dizer "SIM" para uma vida inteira juntos!
+            </p>
 
-<section class="mensagem">
+            <h1>
+                FELIPE <span>&</span> ASTHARI
+            </h1>
 
-<h2>Com alegria no coração...</h2>
+            <div class="linha-coracao">
+                <span></span>
+                <strong>♥</strong>
+                <span></span>
+            </div>
 
-<p>
-Dois corações, uma só história e um propósito guiado por Deus.
-Com alegria, convidamos você para celebrar o início da nossa nova jornada.
-</p>
+            <a href="#contagem" class="botao-descer">
+                ↓
+            </a>
 
-</section>
+        </div>
 
-
-<section class="local">
-
-<h2>Local</h2>
-
-<p>
-Clique abaixo para abrir a localização:
-</p>
-
-<a href="https://maps.app.goo.gl/Unjz6AKgtt5qVXFf7" target="_blank">
-📍 Ver localização
-</a>
-
-</section>
+    </header>
 
 
-<section class="confirmacao">
+    <!-- =========================
+         CONTAGEM REGRESSIVA
+    ========================== -->
 
-<h2>Confirmação de presença</h2>
+    <section class="contagem" id="contagem">
 
-<p>
-Sua presença é muito importante para nós ❤️
-</p>
+        <h2>
+            FALTA POUCO PARA O NOSSO GRANDE DIA!
+        </h2>
 
-<button onclick="confirmar()">
-✅ Confirmar presença
-</button>
+        <div class="decoracao">
+            <span></span>
+            ♥
+            <span></span>
+        </div>
+
+        <div class="contador">
+
+            <div class="tempo">
+                <strong id="dias">00</strong>
+                <span>DIAS</span>
+            </div>
+
+            <div class="separador"></div>
+
+            <div class="tempo">
+                <strong id="horas">00</strong>
+                <span>HORAS</span>
+            </div>
+
+            <div class="separador"></div>
+
+            <div class="tempo">
+                <strong id="minutos">00</strong>
+                <span>MINUTOS</span>
+            </div>
+
+            <div class="separador"></div>
+
+            <div class="tempo">
+                <strong id="segundos">00</strong>
+                <span>SEGUNDOS</span>
+            </div>
+
+        </div>
+
+    </section>
 
 
-<button onclick="naoVou()">
-❌ Não poderei comparecer
-</button>
+    <!-- =========================
+         INFORMAÇÕES DO CASAMENTO
+    ========================== -->
 
-</section>
+    <section class="informacoes">
+
+        <div class="texto-convite">
+
+            <h2>
+                VOCÊ É MUITO ESPECIAL PARA NÓS!
+            </h2>
+
+            <div class="decoracao">
+                <span></span>
+                ♥
+                <span></span>
+            </div>
+
+            <p>
+                Com muita alegria e gratidão a Deus,
+                convidamos você para celebrar conosco
+                um dos dias mais especiais de nossas vidas.
+            </p>
+
+            <p>
+                Sua presença tornará esse momento
+                ainda mais inesquecível.
+            </p>
+
+            <div class="esperamos">
+                Esperamos por você!
+            </div>
+
+            <div class="folhinhas">
+                ❧ ❧ ❧
+            </div>
+
+        </div>
 
 
-<script src="script.js"></script>
+        <div class="detalhes">
+
+            <div class="detalhe">
+
+                <div class="icone">
+                    📅
+                </div>
+
+                <div>
+                    <strong>16 DE JANEIRO DE 2027</strong>
+                    <small>SÁBADO</small>
+                </div>
+
+            </div>
+
+
+            <div class="detalhe">
+
+                <div class="icone">
+                    🕐
+                </div>
+
+                <div>
+                    <strong>19H00</strong>
+                    <small>HORÁRIO DA CERIMÔNIA</small>
+                </div>
+
+            </div>
+
+
+            <div class="detalhe">
+
+                <div class="icone">
+                    📍
+                </div>
+
+                <div>
+                    <strong>LOCAL DA CERIMÔNIA</strong>
+                    <small>Endereço do casamento</small>
+
+                    <a
+                        href="https://www.google.com/maps"
+                        target="_blank"
+                        class="botao-localizacao"
+                    >
+                        📍 VER LOCALIZAÇÃO
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="foto-local">
+
+            <img
+                src="imagens/fundo-local.jpg"
+                alt="Local da cerimônia"
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         VERSÍCULO
+    ========================== -->
+
+    <section class="versiculo">
+
+        <div class="ramo-verde esquerda">❧</div>
+
+        <div>
+
+            <p>
+                "Assim, eles já não são dois, mas sim uma só carne.
+                Portanto, o que Deus uniu, ninguém separe."
+            </p>
+
+            <strong>
+                MATEUS 19:6
+            </strong>
+
+        </div>
+
+        <div class="ramo-verde direita">❧</div>
+
+    </section>
+
+
+    <!-- =========================
+         CONFIRMAÇÃO DE PRESENÇA
+    ========================== -->
+
+    <section class="rsvp">
+
+        <h2>
+            CONFIRME SUA PRESENÇA
+        </h2>
+
+        <div class="decoracao">
+            <span></span>
+            ♥
+            <span></span>
+        </div>
+
+        <p class="subtitulo">
+            Sua resposta é muito importante para nós!
+        </p>
+
+
+        <form id="formulario">
+
+            <div class="campo nome">
+
+                <label for="nome">
+                    NOME COMPLETO *
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome"
+                    required
+                >
+
+            </div>
+
+
+            <div class="campo presenca">
+
+                <label>
+                    VOCÊ IRÁ AO CASAMENTO? *
+                </label>
+
+                <div class="opcoes">
+
+                    <label class="opcao presente">
+
+                        <input
+                            type="radio"
+                            name="presenca"
+                            value="Sim, estarei presente"
+                            required
+                        >
+
+                        <span>
+                            ♡
+                            SIM, ESTAREI PRESENTE
+                        </span>
+
+                    </label>
+
+
+                    <label class="opcao ausente">
+
+                        <input
+                            type="radio"
+                            name="presenca"
+                            value="Não poderei comparecer"
+                        >
+
+                        <span>
+                            ♡
+                            NÃO PODEREI COMPARECER
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="quantidade">
+                    QUANTAS PESSOAS IRÃO?
+                    <em>(incluindo você)</em>
+                </label>
+
+                <select id="quantidade" name="quantidade">
+
+                    <option value="1">1 pessoa</option>
+                    <option value="2">2 pessoas</option>
+                    <option value="3">3 pessoas</option>
+                    <option value="4">4 pessoas</option>
+                    <option value="5">5 pessoas</option>
+                    <option value="6">6 pessoas</option>
+                    <option value="7">7 pessoas</option>
+                    <option value="8">8 pessoas</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="campo mensagem">
+
+                <label for="mensagem">
+                    MENSAGEM PARA OS NOIVOS
+                    <em>(opcional)</em>
+                </label>
+
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Deixe aqui sua mensagem..."
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="botao-confirmar">
+
+                ✈
+                CONFIRMAR PRESENÇA
+
+            </button>
+
+
+            <div class="seguranca">
+
+                🔒
+                Suas informações estão seguras conosco!
+
+            </div>
+
+        </form>
+
+
+        <div id="mensagem-sucesso" class="sucesso">
+
+            ❤️ Obrigado por confirmar sua presença!
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer>
+
+        <div class="frase-final">
+            Obrigado por fazer parte da nossa história!
+        </div>
+
+        <div class="coracao-final">
+            ♥
+        </div>
+
+        <h3>
+            FELIPE & ASTHARI
+        </h3>
+
+        <div class="coracao-branco">
+            ♥
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
+
 </html>
