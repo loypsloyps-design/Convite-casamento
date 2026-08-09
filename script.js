@@ -5,6 +5,7 @@
 const dataCasamento = new Date(2027, 0, 16, 19, 0, 0).getTime();
 
 function atualizarContagem() {
+
     const agora = new Date().getTime();
     const distancia = dataCasamento - agora;
 
@@ -62,6 +63,7 @@ const formulario = document.getElementById("formulario");
 const mensagemSucesso =
     document.getElementById("mensagem-sucesso");
 
+
 formulario.addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -80,6 +82,7 @@ formulario.addEventListener("submit", function(event) {
     const mensagem =
         document.getElementById("mensagem").value;
 
+
     if (!presenca) {
 
         alert("Por favor, informe se você irá ao casamento.");
@@ -92,14 +95,15 @@ formulario.addEventListener("submit", function(event) {
        GOOGLE PLANILHAS
     ========================= */
 
-
-      const urlGoogle =
-    "https://script.google.com/macros/s/AKfycbxha2KkKsyUtaZlHM-kuYQQJNx0j0DzBcc8n-1ca7Ubi-z28ZvPeVHF2MID8I8PdqZQ/exec";
+    const urlGoogle =
+        "https://script.google.com/macros/s/AKfycbxha2KkKsyUtaZlHM-kuYQQJNx0j0DzBcc8n-1ca7Ubi-z28ZvPeVHF2MID8I8PdqZQ/exec";
 
 
     fetch(urlGoogle, {
 
         method: "POST",
+
+        mode: "no-cors",
 
         headers: {
             "Content-Type": "text/plain;charset=utf-8"
@@ -115,33 +119,16 @@ formulario.addEventListener("submit", function(event) {
         })
 
     })
-    .then(function(resposta) {
+    .then(function() {
 
-        return resposta.json();
+        mensagemSucesso.style.display = "block";
 
-    })
-    .then(function(resultado) {
+        formulario.reset();
 
-        if (resultado.sucesso) {
-
-            mensagemSucesso.style.display = "block";
-
-            formulario.reset();
-
-            mensagemSucesso.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-
-        } else {
-
-            alert(
-                "Não foi possível enviar sua resposta. Tente novamente."
-            );
-
-            console.error(resultado.erro);
-
-        }
+        mensagemSucesso.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
 
     })
     .catch(function(erro) {
@@ -149,7 +136,7 @@ formulario.addEventListener("submit", function(event) {
         console.error(erro);
 
         alert(
-            "Ocorreu um erro ao enviar sua resposta. Tente novamente."
+            "Não foi possível enviar sua resposta. Tente novamente."
         );
 
     });
