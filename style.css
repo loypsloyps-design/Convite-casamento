@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Georgia', serif;
+}
+
+body {
+    background: #faf7f2;
+    color: #4a3b32;
+    text-align: center;
+}
+
+
+.capa {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.foto {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 4px solid #c8a96a;
+    background: #eee;
+    margin-bottom: 30px;
+}
+
+
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+.capa p {
+    font-size: 22px;
+}
+
+
+.data {
+    margin-top: 25px;
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+
+section {
+    padding: 50px 20px;
+}
+
+
+.mensagem,
+.local,
+.confirmacao {
+    max-width: 600px;
+    margin: auto;
+}
+
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 25px;
+    background: #c8a96a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+
+button {
+    display: block;
+    width: 90%;
+    max-width: 350px;
+    margin: 15px auto;
+    padding: 18px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background: #c8a96a;
+    color: white;
+}
+
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+@media(max-width:600px){
+
+h1 {
+    font-size: 35px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+}
