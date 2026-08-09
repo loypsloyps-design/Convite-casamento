@@ -1,3 +1,4 @@
+```javascript
 /* =========================
    CONTAGEM REGRESSIVA
 ========================= */
@@ -52,7 +53,6 @@ function atualizarContagem() {
         String(segundos).padStart(2, "0");
 }
 
-
 atualizarContagem();
 
 setInterval(atualizarContagem, 1000);
@@ -95,34 +95,73 @@ formulario.addEventListener("submit", function(event) {
     }
 
 
-    /*
-       AQUI VAMOS CONECTAR AO GOOGLE PLANILHAS
-       NA PRÓXIMA ETAPA.
+    /* =========================
+       ENVIAR PARA GOOGLE PLANILHAS
+    ========================= */
 
-       Os dados que serão enviados são:
-
-       nome
-       presenca
-       quantidade
-       mensagem
-    */
+    const urlGoogle =
+        "https://script.google.com/macros/s/AKfycby_21OXMCy7-FK9z7P4JTE8lQgYzrQbg6y2FQbSiQHfBXEvyK4vnemWMnVYljqQvyob/exec";
 
 
-    console.log({
-        nome: nome,
-        presenca: presenca.value,
-        quantidade: quantidade,
-        mensagem: mensagem
-    });
+    fetch(urlGoogle, {
 
+        method: "POST",
 
-    mensagemSucesso.style.display = "block";
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
 
-    formulario.reset();
+        body: JSON.stringify({
 
-    mensagemSucesso.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+            nome: nome,
+
+            presenca: presenca.value,
+
+            quantidade: quantidade,
+
+            mensagem: mensagem
+
+        })
+
+    })
+    .then(function(resposta) {
+
+        return resposta.json();
+
+    })
+    .then(function(resultado) {
+
+        if (resultado.sucesso) {
+
+            mensagemSucesso.style.display = "block";
+
+            formulario.reset();
+
+            mensagemSucesso.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+        } else {
+
+            alert(
+                "Não foi possível enviar sua resposta. Tente novamente."
+            );
+
+            console.error(resultado.erro);
+
+        }
+
+    })
+    .catch(function(erro) {
+
+        console.error(erro);
+
+        alert(
+            "Ocorreu um erro ao enviar sua resposta. Tente novamente."
+        );
+
     });
 
 });
+```
