@@ -3,7 +3,7 @@
    CONTAGEM REGRESSIVA
 ========================= */
 
-const dataCasamento = new Date("January 16, 2027 19:00:00").getTime();
+const dataCasamento = new Date("2027-01-16T19:00:00-03:00").getTime();
 
 function atualizarContagem() {
 
