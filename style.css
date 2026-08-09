@@ -1,33 +1,332 @@
-.confirmacao input {
-    width: 90%;
-    max-width: 400px;
-    padding: 16px 20px;
-    margin: 10px auto 20px;
-    border: 2px solid #c8a96a;
-    border-radius: 30px;
-    font-size: 18px;
-    font-family: Georgia, serif;
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Georgia', serif;
+    color: #4a3b32;
     text-align: center;
+
+    /* FOTO DE FUNDO */
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.28),
+            rgba(0, 0, 0, 0.28)
+        ),
+        url('fundo.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CAPA */
+
+.capa {
+    min-height: 100vh;
+
+    padding: 60px 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+/* CAIXA PRINCIPAL DA CAPA */
+
+.capa-conteudo {
+    width: 100%;
+    max-width: 700px;
+
+    padding: 45px 30px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(5px);
+}
+
+/* FOTO DE PERFIL */
+
+.foto {
+    width: 220px;
+    height: 220px;
+
+    border-radius: 50%;
+
+    border: 5px solid #c8a96a;
+
+    background-image: url('foto de perfil.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin: 0 auto 30px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* TÍTULO */
+
+h1 {
+    font-size: 48px;
+    margin-bottom: 12px;
+
+    color: #4a3b32;
+}
+
+.capa p {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+/* DATA */
+
+.data {
+    margin-top: 25px;
+
+    font-size: 22px;
+
+    line-height: 1.6;
+}
+
+/* SEÇÕES */
+
+section {
+    padding: 70px 20px;
+}
+
+/* TEXTOS */
+
+.mensagem,
+.local,
+.confirmacao {
+    width: 100%;
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* BOTÕES DE LINKS */
+
+a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 15px 30px;
+
+    background: #c8a96a;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+a:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* CONFIRMAÇÃO */
+
+.confirmacao {
+    padding: 40px 25px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(6px);
+}
+
+.confirmacao h2 {
+    margin-bottom: 10px;
+}
+
+/* CAMPO DO NOME */
+
+.confirmacao input {
+    display: block;
+
+    width: 90%;
+    max-width: 450px;
+
+    margin: 25px auto 20px;
+
+    padding: 17px 22px;
+
+    border: 2px solid #c8a96a;
+
+    border-radius: 35px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #4a3b32;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    text-align: center;
+
     outline: none;
+
+    transition: 0.3s;
 }
 
 .confirmacao input:focus {
-    border-color: #a8894f;
+    border-color: #9f8149;
+
+    box-shadow:
+        0 0 0 4px rgba(200, 169, 106, 0.18);
 }
+
+/* BOTÕES DE CONFIRMAÇÃO */
 
 .botoes-confirmacao {
     display: flex;
+
     justify-content: center;
+
+    align-items: center;
+
     gap: 15px;
+
     flex-wrap: wrap;
+
+    margin-top: 20px;
 }
 
 .botoes-confirmacao button {
     width: 180px;
-    margin: 10px 0;
+
+    padding: 16px 20px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    background: #c8a96a;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
-#resultado {
-    margin-top: 20px;
-    font-size: 18px;
+.botoes-confirmacao button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+
+    background: #b49456;
 }
+
+/* MENSAGEM DE RESULTADO */
+
+#resultado {
+    margin-top: 25px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    color: #4a3b32;
+}
+
+/* BOTÕES GERAIS */
+
+button {
+    font-family: Georgia, serif;
+}
+
+/* RESPONSIVIDADE PARA CELULAR */
+
+@media (max-width: 600px) {
+
+    .capa {
+        padding: 30px 15px;
+    }
+
+    .capa-conteudo {
+        padding: 35px 20px;
+
+        border-radius: 20px;
+    }
+
+    .foto {
+        width: 180px;
+        height: 180px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .capa p {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 27px;
+    }
+
+    .confirmacao {
+        padding: 30px 15px;
+    }
+
+    .botoes-confirmacao {
+        flex-direction: column;
+    }
+
+    .botoes-confirmacao button {
+        width: 90%;
+        max-width: 300px;
+    }
+}
+```
