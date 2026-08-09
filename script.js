@@ -1,4 +1,3 @@
-```javascript
 /* =========================
    CONTAGEM REGRESSIVA
 ========================= */
@@ -6,18 +5,14 @@
 const dataCasamento = new Date(2027, 0, 16, 19, 0, 0).getTime();
 
 function atualizarContagem() {
-
     const agora = new Date().getTime();
-
     const distancia = dataCasamento - agora;
 
     if (distancia <= 0) {
-
         document.getElementById("dias").textContent = "00";
         document.getElementById("horas").textContent = "00";
         document.getElementById("minutos").textContent = "00";
         document.getElementById("segundos").textContent = "00";
-
         return;
     }
 
@@ -67,7 +62,6 @@ const formulario = document.getElementById("formulario");
 const mensagemSucesso =
     document.getElementById("mensagem-sucesso");
 
-
 formulario.addEventListener("submit", function(event) {
 
     event.preventDefault();
@@ -86,7 +80,6 @@ formulario.addEventListener("submit", function(event) {
     const mensagem =
         document.getElementById("mensagem").value;
 
-
     if (!presenca) {
 
         alert("Por favor, informe se você irá ao casamento.");
@@ -96,7 +89,7 @@ formulario.addEventListener("submit", function(event) {
 
 
     /* =========================
-       ENVIAR PARA GOOGLE PLANILHAS
+       GOOGLE PLANILHAS
     ========================= */
 
     const urlGoogle =
@@ -114,11 +107,8 @@ formulario.addEventListener("submit", function(event) {
         body: JSON.stringify({
 
             nome: nome,
-
             presenca: presenca.value,
-
             quantidade: quantidade,
-
             mensagem: mensagem
 
         })
@@ -164,4 +154,3 @@ formulario.addEventListener("submit", function(event) {
     });
 
 });
-```
