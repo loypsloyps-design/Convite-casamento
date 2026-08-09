@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     background-image: url('fundo.jpg');
     background-position: center 10%;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     color: #4a3b32;
     text-align: center;
