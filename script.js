@@ -1,37 +1,34 @@
-function confirmar(){
+<script>
+const URL_DO_SCRIPT = "COLE_AQUI_A_URL_DO_SEU_APPS_SCRIPT";
 
-    let nome = prompt("Digite seu nome para confirmar presença:");
+function confirmarPresenca(resposta) {
 
-    if(nome){
+    const nome = document.getElementById("nome").value.trim();
+    const resultado = document.getElementById("resultado");
 
-        alert(
-        "Obrigado, " + nome + "! ❤️\n\nSua presença foi confirmada no casamento de Felipe e Asthari."
-        );
-
-    } else {
-
-        alert("Por favor, informe seu nome.");
-
+    if (!nome) {
+        resultado.textContent = "Digite seu nome antes de confirmar.";
+        return;
     }
 
+    resultado.textContent = "Enviando...";
+
+    fetch(URL_DO_SCRIPT, {
+        method: "POST",
+        body: JSON.stringify({
+            nome: nome,
+            resposta: resposta
+        })
+    })
+    .then(() => {
+        resultado.textContent =
+            `Obrigado, ${nome}! Sua resposta foi registrada.`;
+
+        document.getElementById("nome").value = "";
+    })
+    .catch(() => {
+        resultado.textContent =
+            "Não foi possível enviar. Tente novamente.";
+    });
 }
-
-
-
-function naoVou(){
-
-    let nome = prompt("Digite seu nome:");
-
-    if(nome){
-
-        alert(
-        "Obrigado pelo retorno, " + nome + ". Sentiremos sua falta, mas agradecemos o carinho ❤️"
-        );
-
-    } else {
-
-        alert("Resposta registrada.");
-
-    }
-
-}
+</script>
