@@ -93,7 +93,8 @@ formulario.addEventListener("submit", function(event) {
     ========================= */
 
     const urlGoogle =
-        "https://script.google.com/macros/s/AKfycby_21OXMCy7-FK9z7P4JTE8lQgYzrQbg6y2FQbSiQHfBXEvyK4vnemWMnVYljqQvyob/exec";
+       const urlGoogle =
+    "https://script.google.com/macros/s/AKfycbxgLQF4UsOtVQG1JdGPbgLHYwXj60LZhV8xMyFkiU4DISSfITLfcS9FV-EpfFyWynbl/exec";
 
 
     fetch(urlGoogle, {
