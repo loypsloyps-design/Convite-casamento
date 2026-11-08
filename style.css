@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Parisienne&display=swap');
 /* =========================
    CONFIGURAÇÕES GERAIS
 ========================= */
@@ -702,5 +703,184 @@ footer h3 {
 
     .frase-final {
         font-size: 25px;
+    }
+}
+/* =========================================
+   REFINAMENTO VISUAL — CASAMENTO
+========================================= */
+
+:root {
+    --azul-casamento: #294c70;
+    --texto-principal: #344b60;
+    --texto-suave: #66798b;
+}
+
+/* Fonte principal */
+body {
+    font-family: "DM Sans", sans-serif;
+    color: var(--texto-principal);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Títulos elegantes */
+.hero h1,
+.contagem h2,
+.rsvp h2,
+.texto-convite h2,
+.detalhe strong,
+footer h3,
+.tempo strong {
+    font-family: "Cormorant Garamond", serif;
+}
+
+/* Textos */
+.frase-topo,
+.texto-convite p,
+.versiculo p,
+.subtitulo {
+    letter-spacing: 0.15px;
+}
+
+.texto-convite p,
+.versiculo p {
+    line-height: 1.75;
+}
+
+/* Formulário */
+form {
+    border: 1px solid rgba(41, 76, 112, 0.07);
+}
+
+.campo label {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    font-size: 14px;
+    line-height: 1.5;
+    transition: 0.25s ease;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #9aa8b4;
+}
+
+.opcao span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.15px;
+}
+
+.botao-confirmar {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+}
+
+/* Lista de convidados e confirmações */
+.lista-confirmados,
+.lista-confirmacoes,
+.lista-confirmacao,
+.lista-convidados,
+.lista-presencas,
+.lista-presenca,
+.lista-respostas,
+.confirmados-lista,
+#lista-confirmados,
+#listaConfirmados,
+#lista-convidados,
+#listaConvidados,
+#lista-presencas,
+#listaPresencas {
+    font-family: "DM Sans", sans-serif;
+    color: var(--texto-principal);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+.lista-confirmados li,
+.lista-confirmacoes li,
+.lista-confirmacao li,
+.lista-convidados li,
+.lista-presencas li,
+.lista-presenca li,
+.lista-respostas li,
+.confirmados-lista li,
+#lista-confirmados li,
+#listaConfirmados li,
+#lista-convidados li,
+#listaConvidados li,
+#lista-presencas li,
+#listaPresencas li,
+.convidado-item,
+.item-convidado,
+.confirmacao-item,
+.resposta-item {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--texto-principal);
+}
+
+/* Mensagens e detalhes */
+.sucesso,
+.seguranca,
+.campo label em,
+.detalhe small {
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+}
+
+/* Interações */
+.botao-descer,
+.botao-localizacao,
+.botao-confirmar,
+.opcao span {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Ajustes para celular */
+@media (max-width: 480px) {
+    .campo label {
+        font-size: 12px;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 16px;
+    }
+
+    .opcao span {
+        font-size: 12px;
+    }
+
+    .lista-confirmados li,
+    .lista-confirmacoes li,
+    .lista-confirmacao li,
+    .lista-convidados li,
+    .lista-presencas li,
+    .lista-presenca li,
+    .lista-respostas li,
+    .confirmados-lista li,
+    .convidado-item,
+    .item-convidado,
+    .confirmacao-item,
+    .resposta-item {
+        font-size: 14px;
     }
 }
